@@ -1,0 +1,54 @@
+.body {
+  color: white;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: x-large;
+}
+
+.html {
+  background-color: black;
+}
+
+.homebutton {
+  color: white;
+  text-align: center;
+  border: solid white 2px;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 2px;
+  margin-left: 3rem;
+}
+
+.homebutton:hover {
+  background-color: white;
+  color: black;
+  border: solid gold;
+}
+
+.line {
+  background-color: black;
+  height: 3px;
+}
+
+.graph {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.stylebg {
+  height: 270px;
+  width: 850px;
+  margin-right: 10;
+  margin-left: 5;
+  opacity: 40%;
+  position: absolute;
+}

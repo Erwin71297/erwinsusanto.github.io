@@ -1,0 +1,50 @@
+.body {
+  color: white;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.header {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: x-large;
+}
+
+.homebutton {
+  color: white;
+  text-align: center;
+  border: solid white 2px;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 2px;
+  margin-left: 3rem;
+}
+
+.homebutton:hover {
+  background-color: white;
+  color: black;
+  border: solid gold;
+}
+
+.html {
+  background-color: black;
+}
+
+.stylebg {
+  height: 270px;
+  width: 550px;
+  opacity: 40%;
+  position: absolute;
+}
+
+.changeonhover {
+  margin-left: 3px;
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.changeonhover:hover{
+  size: 150%;
+  background-color: gold;
+}
