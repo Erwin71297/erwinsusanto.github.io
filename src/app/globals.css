@@ -26,22 +26,3 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.slide-in{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: grey;
-  transform-origin: right;
-}
-
-.slide-out{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: grey;
-  transform-origin: left;
-}

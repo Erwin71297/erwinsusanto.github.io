@@ -4,8 +4,7 @@ export default function Works() {
     return <>
         <html className={styles.html}>
             <div className={styles.body}>
-                <h1 className={styles.header}>Here are my work!</h1>
-                
+                <h1 className={styles.header}>Here are my works!</h1>
             </div>
         </html>
     </>
