@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -75,7 +75,7 @@ export default function Home() {
             </span>
           </p>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Here's what I like to do in my spare time.
+            Here is what I like to do in my spare time.
           </p>
         </div>
 
@@ -92,5 +92,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }

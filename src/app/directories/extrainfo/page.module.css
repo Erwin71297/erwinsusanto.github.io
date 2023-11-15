@@ -1,14 +1,7 @@
 .body {
     color: white;
     width: auto;
-  }
-
-  .header{
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: x-large;
-  }
+}
 
 .html{
     background-color: black;
