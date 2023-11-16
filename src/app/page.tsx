@@ -11,7 +11,7 @@ export default function Home() {
             className="relative border-white-300 rounded-2xl"
             src="/assets/image_erwin.jpeg"
             alt="Erwin Picture"
-            width={180}
+            width={150}
             height={37}
             priority
           />
@@ -30,18 +30,10 @@ export default function Home() {
               Download CV
             </Link>
           </p>
-          <p className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-            <Link
-              className="mb-3 text-2xl font-semibold"
-              href="/directories/works"
-            >
-              Explore Works
-            </Link>
-          </p>
         </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="mt-20 mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
           <p className="mb-3 text-2xl font-semibold group rounded-lg border border-transparent px-5 py-4">
             <Link href="/directories/skillset">Skillset</Link>
