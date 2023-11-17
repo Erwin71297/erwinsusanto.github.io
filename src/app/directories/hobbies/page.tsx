@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 import React, { useState } from "react";
 import { Tab } from "@headlessui/react";
+import Navigation from "@/app/component/navigation";
 
 export default function Hobbies() {
   let [categories] = useState({
@@ -65,73 +66,70 @@ export default function Hobbies() {
   return (
     <>
       <html className={styles.html}>
-        <div className={styles.body}>
-          <a href="/" className={styles.homebutton}>
-            Home
-          </a>
-          <h1 className={styles.header}>My Hobbies</h1>
-        </div>
-        <div className="w-full px-2 py-16 mr-auto ml-auto px-5">
-          <Tab.Group>
-            <Tab.List className="flex space-x-1 rounded-xl bg-yellow-900/20 p-1">
-              {Object.keys(categories).map((category) => (
-                <Tab
-                  key={category}
-                  className={({ selected }) =>
-                    classNames(
-                      "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-black-700",
-                      "ring-white/60 ring-offset-2 ring-offset-yellow-400 focus:outline-none focus:ring-2",
-                      selected
-                        ? "bg-white shadow"
-                        : "text-yellow-100 hover:bg-white/[0.12] hover:text-white"
-                    )
-                  }
-                >
-                  {category}
-                </Tab>
-              ))}
-            </Tab.List>
-            <Tab.Panels className="mt-2">
-              {Object.values(categories).map((posts, idx) => (
-                <Tab.Panel
-                  key={idx}
-                  className={classNames(
-                    "rounded-xl bg-white p-3",
-                    "ring-white/60 ring-offset-2 ring-offset-yellow-400 focus:outline-none focus:ring-2"
-                  )}
-                >
-                  <ul>
-                    {posts.map((post) => (
-                      <li
-                        key={post.id}
-                        className="relative rounded-md p-3 hover:bg-gray-100"
-                      >
-                        <h3 className="text-sm font-medium leading-5">
-                          {post.title}
-                        </h3>
+        <body>
+         <Navigation/>
+          <div className="w-full px-2 py-16 mr-auto ml-auto px-5">
+            <Tab.Group>
+              <Tab.List className="flex space-x-1 rounded-xl bg-yellow-900/20 p-1">
+                {Object.keys(categories).map((category) => (
+                  <Tab
+                    key={category}
+                    className={({ selected }) =>
+                      classNames(
+                        "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-black-700",
+                        "ring-white/60 ring-offset-2 ring-offset-yellow-400 focus:outline-none focus:ring-2",
+                        selected
+                          ? "bg-white shadow"
+                          : "text-yellow-100 hover:bg-white/[0.12] hover:text-white"
+                      )
+                    }
+                  >
+                    {category}
+                  </Tab>
+                ))}
+              </Tab.List>
+              <Tab.Panels className="mt-2">
+                {Object.values(categories).map((posts, idx) => (
+                  <Tab.Panel
+                    key={idx}
+                    className={classNames(
+                      "rounded-xl bg-white p-3",
+                      "ring-white/60 ring-offset-2 ring-offset-yellow-400 focus:outline-none focus:ring-2"
+                    )}
+                  >
+                    <ul>
+                      {posts.map((post) => (
+                        <li
+                          key={post.id}
+                          className="relative rounded-md p-3 hover:bg-gray-100"
+                        >
+                          <h3 className="text-sm font-medium leading-5">
+                            {post.title}
+                          </h3>
 
-                        <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                          <li>{post.types}</li>
-                        </ul>
-                        <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                          <li>{post.comments}</li>
-                        </ul>
+                          <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
+                            <li>{post.types}</li>
+                          </ul>
+                          <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
+                            <li>{post.comments}</li>
+                          </ul>
 
-                        <a
-                          href="#"
-                          className={classNames(
-                            "absolute inset-0 rounded-md",
-                            "ring-yellow-400 focus:z-10 focus:outline-none focus:ring-2"
-                          )}
-                        />
-                      </li>
-                    ))}
-                  </ul>
-                </Tab.Panel>
-              ))}
-            </Tab.Panels>
-          </Tab.Group>
-        </div>
+                          <a
+                            href="#"
+                            className={classNames(
+                              "absolute inset-0 rounded-md",
+                              "ring-yellow-400 focus:z-10 focus:outline-none focus:ring-2"
+                            )}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </Tab.Panel>
+                ))}
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
+        </body>
       </html>
     </>
   );

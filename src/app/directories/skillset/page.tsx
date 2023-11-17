@@ -3,18 +3,9 @@
 import styles from "./page.module.css";
 import React, { useState } from "react";
 import { Tab } from "@headlessui/react";
+import Navigation from "@/app/component/navigation";
 
 export default function Skillset() {
-  const [show, setShow] = useState(false);
-  const [showGolang, setShowGolang] = useState(true);
-  const [showJs, setShowJs] = useState(true);
-  const [showHtml, setShowHtml] = useState(true);
-  const [showCss, setShowCss] = useState(true);
-  const [showJava, setShowJava] = useState(true);
-  const [showSql, setShowSql] = useState(true);
-  const [showPostgre, setShowPostgre] = useState(true);
-  const [showC, setShowC] = useState(true);
-
   let [categories] = useState({
     Go: [
       {
@@ -96,68 +87,65 @@ export default function Skillset() {
   return (
     <>
       <html className={styles.html}>
-       <div className={styles.body}>
-          <a href="/" className={styles.homebutton}>
-            Home
-          </a>
-          <h1 className={styles.header}>Skillset</h1>
-        </div>
-        <div className="w-full h-80 py-16 mr-auto ml-auto px-16 grid lg:grid-cols-6">
-          <Tab.Group vertical>
-            <Tab.List className="flex rounded-l-xl bg-gray-700 px-1 py-1 grid lg:grid-rows-8">
-              {Object.keys(categories).map((category) => (
-                <Tab
-                  key={category}
-                  className={({ selected }) =>
-                    classNames(
-                      "w-full rounded-lg py-2.5text-sm font-medium leading-5 text-black-700",
-                      "ring-white/60 ring-offset-2 ring-offset-yellow-400 focus:outline-none focus:ring-2",
-                      selected
-                        ? "bg-white shadow"
-                        : "text-yellow-100 hover:bg-white/[0.12] hover:text-white"
-                    )
-                  }
-                >
-                  {category}
-                </Tab>
-              ))}
-            </Tab.List>
-            <Tab.Panels className="lg:col-span-5">
-              {Object.values(categories).map((posts, idx) => (
-                <Tab.Panel
-                  key={idx}
-                  className={classNames(
-                    "rounded-r-xl bg-white p-3",
-                    "ring-white/60 ring-offset-2 ring-offset-yellow-400 focus:outline-none focus:ring-2"
-                  )}
-                >
-                  <ul >
-                    {posts.map((post) => (
-                      <li
-                        key={post.id}
-                        className="h-80 rounded-md p-3 hover:bg-gray-100"
-                      >
-                        <h3 className="text-lg font-medium leading-7">
-                          {post.title}
-                        </h3>
-                        <hr className={styles.line}></hr>
-                        <ul className="mt-2 flex space-x-1 text-base font-normal leading-5 text-gray-500">
-                          <li>{post.types}</li>
-                        </ul>
-                        <ul className="mt-5 flex space-x-1 text-base font-normal leading-4 text-gray-500">
-                          <li>{post.comments}</li>
-                        </ul>
-                        <ul className="mt-2 flex space-x-1 text-base font-normal leading-4 text-gray-500">
-                          <li>{post.commentscont}</li>
-                        </ul>
-                      </li>
-                    ))}
-                  </ul>
-                </Tab.Panel>
-              ))}
-            </Tab.Panels>
-          </Tab.Group>
-        </div>
+        <body>
+          <Navigation/>
+          <div className="w-full h-80 py-16 mr-auto ml-auto px-16 grid lg:grid-cols-6">
+            <Tab.Group vertical>
+              <Tab.List className="flex rounded-l-xl bg-gray-700 px-1 py-1 grid lg:grid-rows-8">
+                {Object.keys(categories).map((category) => (
+                  <Tab
+                    key={category}
+                    className={({ selected }) =>
+                      classNames(
+                        "w-full rounded-lg py-2.5text-sm font-medium leading-5 text-black-700",
+                        "ring-white/60 ring-offset-2 ring-offset-yellow-400 focus:outline-none focus:ring-2",
+                        selected
+                          ? "bg-white shadow"
+                          : "text-yellow-100 hover:bg-white/[0.12] hover:text-white"
+                      )
+                    }
+                  >
+                    {category}
+                  </Tab>
+                ))}
+              </Tab.List>
+              <Tab.Panels className="lg:col-span-5">
+                {Object.values(categories).map((posts, idx) => (
+                  <Tab.Panel
+                    key={idx}
+                    className={classNames(
+                      "rounded-r-xl bg-white p-3",
+                      "ring-white/60 ring-offset-2 ring-offset-yellow-400 focus:outline-none focus:ring-2"
+                    )}
+                  >
+                    <ul>
+                      {posts.map((post) => (
+                        <li
+                          key={post.id}
+                          className="h-80 rounded-md p-3 hover:bg-gray-100"
+                        >
+                          <h3 className="text-lg font-medium leading-7">
+                            {post.title}
+                          </h3>
+                          <hr className={styles.line}></hr>
+                          <ul className="mt-2 flex space-x-1 text-base font-normal leading-5 text-gray-500">
+                            <li>{post.types}</li>
+                          </ul>
+                          <ul className="mt-5 flex space-x-1 text-base font-normal leading-4 text-gray-500">
+                            <li>{post.comments}</li>
+                          </ul>
+                          <ul className="mt-2 flex space-x-1 text-base font-normal leading-4 text-gray-500">
+                            <li>{post.commentscont}</li>
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </Tab.Panel>
+                ))}
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
+        </body>
       </html>
     </>
   );

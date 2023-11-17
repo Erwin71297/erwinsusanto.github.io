@@ -1,32 +1,23 @@
 "use client";
 
+import { AOSInit } from "@/app/aos";
 import styles from "./page.module.css";
 import Image from "next/image";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import React, {useEffect} from "react";
+import React from "react";
+import Navigation from "@/app/component/navigation";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function Contacts() {
-  useEffect(() => {
-    AOS.init({
-      once: false,
-      duration: 1000,
-      easing: "ease",
-      anchorPlacement: "top-bottom",
-      offset: 120,
-    });
-  })
   return (
     <>
       <html className={styles.html}>
-        <div className={styles.body}>
-          <a href="/" className={styles.homebutton}>
-            Home
-          </a>
-        </div>
-
-        {/* Here is the start of links */}
-        <div className="overflow-hidden relative w-6/12 mt-5 pb-10 mr-auto ml-auto">
+        <body>
+          <Navigation/>
+          {/* Here is the start of links */}
+          <div className="overflow-hidden relative w-6/12 mt-5 pb-10 mr-auto ml-auto">
             <Image
               className={styles.stylebg}
               src="/assets/jpbg.jpg"
@@ -51,71 +42,121 @@ export default function Contacts() {
               Please Enter The Form Below to Contact Me
             </h2>
           </div>
-        <div className={styles.container}>
+          <div className={styles.container}>
             <div className="grid lg:grid-cols-2">
-              <textarea className={styles.textarea} placeholder="Enter your name" maxLength={20}/>
-              <textarea className={styles.textarea} placeholder="Enter your email" maxLength={30}/>
+              <textarea
+                className={styles.textarea}
+                placeholder="Enter your name"
+                maxLength={20}
+              />
+              <textarea
+                className={styles.textarea}
+                placeholder="Enter your email"
+                maxLength={30}
+              />
             </div>
             <div>
-              <textarea className={styles.textareasubject} placeholder="Enter subject" maxLength={20}/>
+              <textarea
+                className={styles.textareasubject}
+                placeholder="Enter subject"
+                maxLength={20}
+              />
             </div>
             <div>
-              <textarea className={styles.textareamessage} placeholder="Please Enter Message"/>
+              <textarea
+                className={styles.textareamessage}
+                placeholder="Please Enter Message"
+              />
             </div>
             <div>
               <button className={styles.send}>Send</button>
             </div>
-			  </div>
+          </div>
 
           {/* Start of contacts */}
-          <div data-aos="fade-left-up" data-aos-delay="50" className="py-5 px-5 flex mt-20 ml-20">
-            <Image
-              className="relative rounded-3xl"
-              src="/assets/newfacebook.png"
-              alt="facebook"
-              width={40}
-              height={40}
-            />
-            <h1 className="mt-auto mb-auto ml-5 text-white">
-              https://www.facebook.com/erwin.susanto.522
-            </h1>
+          <div className="grid lg:grid-cols-2">
+            <div>
+              <AOSInit />
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                className={classNames(
+                  "py-5 px-5 flex ml-20 mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
+                  "hover:bg-gray-800"
+                )}
+              >
+                <Image
+                  className="relative rounded-3xl"
+                  src="/assets/newfacebook.png"
+                  alt="facebook"
+                  width={40}
+                  height={40}
+                />
+                <h1 className="mt-auto mb-auto ml-5 text-white">Facebook</h1>
+              </div>
+              <AOSInit />
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                className={classNames(
+                  "py-5 px-5 flex ml-20 mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
+                  "hover:bg-gray-800"
+                )}
+              >
+                <Image
+                  className="relative rounded-3xl"
+                  src="/assets/linkedin.png"
+                  alt="linkedin"
+                  width={40}
+                  height={40}
+                />
+                <h1 className="mt-auto mb-auto ml-5 text-white">LinkedIn</h1>
+              </div>
+            </div>
+            <div>
+              <AOSInit />
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+                className={classNames(
+                  "py-5 px-5 flex mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
+                  "hover:bg-gray-800"
+                )}
+              >
+                <Image
+                  className="relative rounded-3xl"
+                  src="/assets/github.png"
+                  alt="github"
+                  width={40}
+                  height={40}
+                />
+                <h1 className="mt-auto mb-auto ml-5 text-white">Github</h1>
+              </div>
+              <AOSInit />
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+                className={classNames(
+                  "py-5 px-5 flex mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
+                  "hover:bg-gray-800"
+                )}
+              >
+                <Image
+                  className="relative rounded-3xl"
+                  src="/assets/instagram.svg.png"
+                  alt="instagram"
+                  width={40}
+                  height={40}
+                />
+                <h1 className="mt-auto mb-auto ml-5 text-white">Instagram</h1>
+              </div>
+            </div>
           </div>
-          <div data-aos="fade-left-up" data-aos-delay="50" className="py-5 px-5 flex ml-20">
-            <Image
-              className="relative rounded-3xl"
-              src="/assets/linkedin.png"
-              alt="linkedin"
-              width={40}
-              height={40}
-            />
-            <h1 className="mt-auto mb-auto ml-5 text-white">
-              https://www.linkedin.com/in/erwin-susanto-431670209/
-            </h1>
-          </div>
-          <div data-aos="fade-left-up" data-aos-delay="50" className="py-5 px-5 flex ml-20">
-            <Image
-              className="relative rounded-3xl"
-              src="/assets/github.png"
-              alt="github"
-              width={40}
-              height={40}
-            />
-            <h1 className="mt-auto mb-auto ml-5 text-white">
-              https://github.com/Erwin71297
-            </h1>
-          </div>
-          <div data-aos="fade-left-up" data-aos-delay="50" className="py-5 px-5 flex ml-20 mb-20">
-            <Image
-              className="relative rounded-3xl"
-              src="/assets/instagram.svg.png"
-              alt="instagram"
-              width={40}
-              height={40}
-            />
-            <h1 className="mt-auto mb-auto ml-5 text-white">
-              https://www.instagram.com/erwins7/
-            </h1>
-          </div>
+        </body>
       </html>
     </>
   );

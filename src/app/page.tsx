@@ -4,6 +4,7 @@ import Link from "next/link"
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      {/* Nav Bar */}
       {/* Picture area */}
       <div className="grid grid-cols-2 gap-10">
         <div>
