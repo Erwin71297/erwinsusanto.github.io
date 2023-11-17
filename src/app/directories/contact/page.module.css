@@ -23,17 +23,6 @@
   border: 2px red solid;
 }
 
-.changeonhover {
-  margin-left: 3px;
-  position: relative;
-  border-radius: 1.5rem;
-}
-
-.changeonhover:hover{
-  size: 150%;
-  background-color: gold;
-}
-
 .container{
   color: black;
   margin: 20px 20rem 50px 20rem;
