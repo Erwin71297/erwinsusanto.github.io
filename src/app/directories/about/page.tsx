@@ -174,7 +174,7 @@ export default function About() {
                 />
                 <h2 className="text-white py-2">Erwin Susanto</h2>
                 <hr className="opacity-30 mt-1 mb-1"></hr>
-                <p className="text-gray-400">React Based Front-End Developer</p>
+                <p className="text-gray-400">NextJS Based Front-End Developer</p>
                 <p className="text-gray-400"> Go Based Back-End Developer</p>
               </div>
               <div
