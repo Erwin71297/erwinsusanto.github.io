@@ -59,7 +59,7 @@ export default function About() {
       proficiency: "70",
     },
     {
-      skill: "React",
+      skill: "Next",
       fill: "#ffc658",
       proficiency: "70",
     },
@@ -345,14 +345,14 @@ export default function About() {
                   </BarChart>
                 </div>
                 <hr className="mt-10 mb-5"></hr>
-                <div className="text-white text-left">
+                <div className="text-yellow-400 text-left">
                   <div className="flex">
                     <Check></Check>
                     <p className="ml-3">Responsible</p>
                   </div>
                   <div className="flex">
                     <Check></Check>
-                    <p className="ml-3">Detail-Oriented</p>
+                    <p className="ml-3">Detail Oriented</p>
                   </div>
                   <div className="flex">
                     <Check></Check>
@@ -360,7 +360,15 @@ export default function About() {
                   </div>
                   <div className="flex">
                     <Check></Check>
-                    <p className="ml-3">Team-Player</p>
+                    <p className="ml-3">Team Player</p>
+                  </div>
+                  <div className="flex">
+                    <Check></Check>
+                    <p className="ml-3">Result Oriented</p>
+                  </div>
+                  <div className="flex">
+                    <Check></Check>
+                    <p className="ml-3">Willing to Speak</p>
                   </div>
                 </div>
                 <hr className="mt-10 mb-5"></hr>
