@@ -150,7 +150,7 @@ export default function About() {
           <Navigation/>
           <div className="grid lg:grid-cols-10">
             <motion.div
-                variants={left}
+                variants={right}
                 initial="hidden"
                 animate="enter"
                 exit="exit"
@@ -412,7 +412,7 @@ export default function About() {
             {/* End of left side */}
             {/* Start of right side */}
             <motion.div
-                variants={right}
+                variants={left}
                 initial="hidden"
                 animate="enter"
                 exit="exit"
