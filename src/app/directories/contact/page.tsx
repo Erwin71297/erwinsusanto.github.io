@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import React from "react";
 import Navigation from "@/app/component/navigation";
+import Link from "next/link";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -15,7 +16,7 @@ export default function Contacts() {
     <>
       <html className={styles.html}>
         <body>
-          <Navigation/>
+          <Navigation />
           {/* Here is the start of links */}
           <div className="overflow-hidden relative w-6/12 mt-5 pb-10 mr-auto ml-auto">
             <Image
@@ -77,83 +78,91 @@ export default function Contacts() {
           <div className="grid lg:grid-cols-2">
             <div>
               <AOSInit />
-              <div
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-                className={classNames(
-                  "py-5 px-5 flex ml-20 mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
-                  "hover:bg-gray-800"
-                )}
-              >
-                <Image
-                  className="relative rounded-3xl"
-                  src="/assets/newfacebook.png"
-                  alt="facebook"
-                  width={40}
-                  height={40}
-                />
-                <h1 className="mt-auto mb-auto ml-5 text-white">Facebook</h1>
-              </div>
+              <Link href="https://www.facebook.com/erwin.susanto.522">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                  className={classNames(
+                    "py-5 px-5 flex ml-20 mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
+                    "hover:bg-gray-800"
+                  )}
+                >
+                  <Image
+                    className="relative rounded-3xl"
+                    src="/assets/newfacebook.png"
+                    alt="facebook"
+                    width={40}
+                    height={40}
+                  />
+                  <h1 className="mt-auto mb-auto ml-5 text-white">Facebook</h1>
+                </div>
+              </Link>
               <AOSInit />
-              <div
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-                className={classNames(
-                  "py-5 px-5 flex ml-20 mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
-                  "hover:bg-gray-800"
-                )}
-              >
-                <Image
-                  className="relative rounded-3xl"
-                  src="/assets/linkedin.png"
-                  alt="linkedin"
-                  width={40}
-                  height={40}
-                />
-                <h1 className="mt-auto mb-auto ml-5 text-white">LinkedIn</h1>
-              </div>
+              <Link href="https://www.linkedin.com/in/erwin-susanto-431670209/">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                  className={classNames(
+                    "py-5 px-5 flex ml-20 mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
+                    "hover:bg-gray-800"
+                  )}
+                >
+                  <Image
+                    className="relative rounded-3xl"
+                    src="/assets/linkedin.png"
+                    alt="linkedin"
+                    width={40}
+                    height={40}
+                  />
+                  <h1 className="mt-auto mb-auto ml-5 text-white">LinkedIn</h1>
+                </div>
+              </Link>
             </div>
             <div>
               <AOSInit />
-              <div
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="300"
-                className={classNames(
-                  "py-5 px-5 flex mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
-                  "hover:bg-gray-800"
-                )}
-              >
-                <Image
-                  className="relative rounded-3xl"
-                  src="/assets/github.png"
-                  alt="github"
-                  width={40}
-                  height={40}
-                />
-                <h1 className="mt-auto mb-auto ml-5 text-white">Github</h1>
-              </div>
+              <Link href="https://github.com/Erwin71297">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  className={classNames(
+                    "py-5 px-5 flex mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
+                    "hover:bg-gray-800"
+                  )}
+                >
+                  <Image
+                    className="relative rounded-3xl"
+                    src="/assets/github.png"
+                    alt="github"
+                    width={40}
+                    height={40}
+                  />
+                  <h1 className="mt-auto mb-auto ml-5 text-white">Github</h1>
+                </div>
+              </Link>
               <AOSInit />
-              <div
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="400"
-                className={classNames(
-                  "py-5 px-5 flex mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
-                  "hover:bg-gray-800"
-                )}
-              >
-                <Image
-                  className="relative rounded-3xl"
-                  src="/assets/instagram.svg.png"
-                  alt="instagram"
-                  width={40}
-                  height={40}
-                />
-                <h1 className="mt-auto mb-auto ml-5 text-white">Instagram</h1>
-              </div>
+              <Link href="https://www.instagram.com/erwins7/">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                  className={classNames(
+                    "py-5 px-5 flex mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
+                    "hover:bg-gray-800"
+                  )}
+                >
+                  <Image
+                    className="relative rounded-3xl"
+                    src="/assets/instagram.svg.png"
+                    alt="instagram"
+                    width={40}
+                    height={40}
+                  />
+                  <h1 className="mt-auto mb-auto ml-5 text-white">Instagram</h1>
+                </div>
+              </Link>
             </div>
           </div>
         </body>
