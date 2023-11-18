@@ -103,7 +103,7 @@ export default function Hobbies() {
                           key={post.id}
                           className="relative rounded-md p-3 hover:bg-gray-100"
                         >
-                          <h3 className="text-sm font-medium leading-5">
+                          <h3 className="text-sm font-medium leading-5 text-gray-700">
                             {post.title}
                           </h3>
 
