@@ -24,11 +24,11 @@ export default function Skillset() {
         id: 1,
         title: "Go Language",
         types:
-          "go-routines, message brokers (ex: GCP Pubsub), Redis (cache), Logging, Error handling, and Tracking (scalyr, otel, sonarqube, New Relic)",
+          "go-routines, message brokers (ex: GCP Pubsub), Redis (cache), Logging, Swagger, Error handling, and Tracking (Scalyr, Open-Telemetry, Sonarqube, New Relic)",
         comments:
           "I started golang at around the same time I started learning backend engineering. It was a new experience which took a while to get used to. To me golang is easy to learn but hard to master, as there's a lot of stuff that needs consideration before implementation. A typical example of this is when accessing the queries, you have the option to use the golang provided gorm or you could still use rawquery. Both have pros and cons and needs sufficient enough knowledge to know when to use which. Another clear example of this is when using golang to perform functions that can be run using go routines. This is because while go routines are recommended when you have many background tasks, the way you use it can result in it being slower and heavier than the typical methods like async functions.",
         commentscont:
-          "All in all, golang is a fun language to learn with many capabilies and synergy with the newer front-end technology. And even after continuing to use it after 2 years +, I believe that I have only scratched the surface of what's to come.",
+          "All in all, golang is a fun language to learn with many capabilies and synergy with the newer front-end technology. And even after continuing to use it after more than 2 years , I believe that I have only scratched the surface of what's to come.",
       },
     ],
   };
@@ -38,9 +38,9 @@ export default function Skillset() {
       {
         id: 1,
         title: "Next.js",
-        types: "Routing, Usestates, Transitions, Modals, etc",
+        types: "Links, useStates, framer-motion, recharts, react-feather, headless-ui, aos",
         comments:
-          "Originally I took the multimedia sub course for Computer Science in uni, meaning that I'm actually more well versed in front-end centric theories, but in comparison, most of the works that's I've done front-end wise is more or less self projects rather than real work experience. This site alone is one such example.",
+          "Originally I took the multimedia sub course for Computer Science in University, meaning that I'm actually more well versed in front-end centric theories, but in comparison, most of the works that's I've done front-end wise is more or less self projects rather than real work experience. This site alone is one such example.",
         commentscont:
           "I do have some favorability towards front-end code as it was my original choice to pursue front-end. And although I've left it for a while in wake of gaining knowledge and experience in back-end, I've been trying to keep my knowledge on the best front-end tech that's available and as such have been practicing it, like nextjs.",
       },
@@ -97,7 +97,7 @@ export default function Skillset() {
         id: 1,
         title: "C#",
         comments:
-          "A language that I learnt during my time at uni when learning to use unity in my multimedia course.",
+          "A language that I learnt during my time at uni when learning to use unity in my multimedia course. We were taught to use unity to code games.",
       },
     ],
   };
