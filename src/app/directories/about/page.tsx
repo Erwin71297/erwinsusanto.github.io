@@ -156,9 +156,7 @@ export default function About() {
                 exit="exit"
                 transition={{
                   ease: "linear",
-                  duration: 2,
-                  x: { duration: 1 },
-                  delay: 1,
+                  duration: 1,
                 }}className="lg:col-span-3">
               {/* Start of left side */}
               <div
@@ -418,9 +416,8 @@ export default function About() {
                 exit="exit"
                 transition={{
                   ease: "linear",
-                  duration: 2,
-                  x: { duration: 1 },
-                  delay: 2,
+                  duration: 1,
+                  delay: 1,
                 }} className="lg:col-span-7 overflow-hidden relative ml-5 mr-10 mt-5 py-5">
               <Image
                 className={styles.stylebg}
