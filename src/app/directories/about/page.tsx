@@ -15,9 +15,21 @@ import {
 } from "recharts";
 import { Check } from "react-feather";
 import Navigation from "@/app/component/navigation";
+import { motion } from "framer-motion"
 
 export default function About() {
   const circleSize = 50;
+  const left = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: -100 },
+  };
+
+  const right = {
+    hidden: { opacity: 0, x: 200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 100 },
+  };
 
   const eg = [
     {
@@ -137,7 +149,17 @@ export default function About() {
         <body>
           <Navigation/>
           <div className="grid lg:grid-cols-10">
-            <div className="lg:col-span-3">
+            <motion.div
+                variants={left}
+                initial="hidden"
+                animate="enter"
+                exit="exit"
+                transition={{
+                  ease: "linear",
+                  duration: 2,
+                  x: { duration: 1 },
+                  delay: 1,
+                }}className="lg:col-span-3">
               {/* Start of left side */}
               <div
                 className={classNames(
@@ -348,7 +370,7 @@ export default function About() {
                   <a href="https://www.facebook.com/erwin.susanto.522">
                     <Image
                       className="relative rounded-3xl"
-                      src="/assets/newfacebook.png"
+                      src="/assets/facebook.png"
                       alt="facebook"
                       width={40}
                       height={40}
@@ -386,10 +408,20 @@ export default function About() {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* End of left side */}
             {/* Start of right side */}
-            <div className="lg:col-span-7 overflow-hidden relative ml-5 mr-10 mt-5 py-5">
+            <motion.div
+                variants={right}
+                initial="hidden"
+                animate="enter"
+                exit="exit"
+                transition={{
+                  ease: "linear",
+                  duration: 2,
+                  x: { duration: 1 },
+                  delay: 2,
+                }} className="lg:col-span-7 overflow-hidden relative ml-5 mr-10 mt-5 py-5">
               <Image
                 className={styles.stylebg}
                 src="/assets/jpbg.jpg"
@@ -504,7 +536,7 @@ export default function About() {
                   </ul>
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </body>
       </html>

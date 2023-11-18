@@ -1,8 +1,18 @@
 .body {
     color: white;
     width: auto;
-}
-
-.html{
+    display: flex;
+    align-items: center;
+  }
+  
+  .header {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-large;
+  }
+  
+  .html {
     background-color: black;
-}
+  }
+  

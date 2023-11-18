@@ -90,7 +90,7 @@ export default function Contacts() {
                 >
                   <Image
                     className="relative rounded-3xl"
-                    src="/assets/newfacebook.png"
+                    src="/assets/facebook.png"
                     alt="facebook"
                     width={40}
                     height={40}

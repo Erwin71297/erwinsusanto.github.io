@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./index.module.css"
+import Image from "next/image";
 
 const Navbar = ({
   toggle,
@@ -15,7 +16,7 @@ const Navbar = ({
             <a href="/" className={styles.homebutton}>
               Home
             </a>
-            <ul className="hidden md:flex gap-x-6 text-black mr-auto ml-auto">
+            <ul className="hidden md:flex gap-x-6 text-black align-right">
               <li>
                 <Link href="/directories/about">
                   <p className={styles.text}>About</p>
@@ -24,6 +25,11 @@ const Navbar = ({
               <li>
                 <Link href="/directories/skillset">
                   <p className={styles.text}>Skillset</p>
+                </Link>
+              </li>
+              <li>
+                <Link href="/directories/hobbies">
+                  <p className={styles.text}>Hobbies</p>
                 </Link>
               </li>
               <li>
