@@ -9,7 +9,7 @@ export default function ExtraInfo() {
       <html className={styles.html}>
         <body>
           <Navigation />
-          <a>This site was made with static data as you can probably tell.</a>
+          <a className="px-5 py-5">This site was made with static data as you can probably tell.</a>
         </body>
       </html>
     </>

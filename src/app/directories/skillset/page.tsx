@@ -28,7 +28,7 @@ export default function Skillset() {
         comments:
           "I started golang at around the same time I started learning backend engineering. It was a new experience which took a while to get used to. To me golang is easy to learn but hard to master, as there's a lot of stuff that needs consideration before implementation. A typical example of this is when accessing the queries, you have the option to use the golang provided gorm or you could still use rawquery. Both have pros and cons and needs sufficient enough knowledge to know when to use which. Another clear example of this is when using golang to perform functions that can be run using go routines. This is because while go routines are recommended when you have many background tasks, the way you use it can result in it being slower and heavier than the typical methods like async functions.",
         commentscont:
-          "All in all, golang is a fun language to learn with many capabilies and synergy with the newer front-end technology. And even after continuing to use it after more than 2 years , I believe that I have only scratched the surface of what's to come.",
+          "I learnt that the Go programming language is very diverse and versatile. I also learnt to better log my codes as to help when debugging the source of bugs or problems using platforms like open telemetry, scalyr, and sonarqube. The databases used were mainly MySql and PostGre based, which elevated my knowledge of them both. I also learnt to cache using redis to make the codes that require data more efficient, this is similar for elastic search that uses indexing to make a code be less strenuous. All in all, golang is a fun language to learn with many capabilies and synergy with the newer front-end technology.",
       },
     ],
   };
@@ -75,7 +75,7 @@ export default function Skillset() {
         id: 1,
         title: "MySQL",
         comments:
-          "One of the two server databases that I am acquainted with when coding using the go language.",
+          "One of the two server databases that I am acquainted with when coding using the go language. Most of the databases in the early days that I used were MySQL purely because of the ease access, these databases usually only contained data that would not be changed regularly and lesser strained datas.",
       },
     ],
   };
@@ -86,7 +86,7 @@ export default function Skillset() {
         id: 1,
         title: "PostGreSQL",
         comments:
-          "One of the two server databases that I am acquainted with when coding using the go language.",
+          "One of the two server databases that I am acquainted with when coding using the go language. When creating the data maps and relational database models, if it appears that more complex and requires consistent acces to read/write, then postgre is used as the database of choice instead.",
       },
     ],
   };
@@ -98,6 +98,17 @@ export default function Skillset() {
         title: "C#",
         comments:
           "A language that I learnt during my time at uni when learning to use unity in my multimedia course. We were taught to use unity to code games.",
+      },
+    ],
+  };
+
+  let docker = {
+    C: [
+      {
+        id: 1,
+        title: "Docker and Kubernetes",
+        comments:
+          "The primary containerization method I use when developing APIs, it was not very difficult to implement and provides alot of upsides. For example, with docker used, there were no complications with versioning like implementing blue/green deployments, this helps out when using CI/CD. Kubenetes was the container orchestration system of choice, mainly because most of long-term scalability as well as fear of complex and heavy workloads. ",
       },
     ],
   };
@@ -418,7 +429,7 @@ export default function Skillset() {
             ))}
           </div>
 
-          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5 mb-20">
+          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5">
             <motion.h3
               variants={left}
               initial="hidden"
@@ -445,6 +456,55 @@ export default function Skillset() {
                   duration: 2,
                   x: { duration: 1 },
                   delay: 13,
+                }}
+                key={idx}
+                className={"bg-white p-3 text-yellow-500 ml-5 mr-10"}
+              >
+                <ul>
+                  {posts.map((post) => (
+                    <li
+                      key={post.id}
+                      className="relative p-3 hover:bg-gradient-to-r from-gray-900 from:10% to-gray-600"
+                    >
+                      <hr className={styles.line}></hr>
+                      <h4 className="mt-2">Description :</h4>
+                      <ul className="mt-2 flex space-x-1 text-base font-normal leading-4 text-gray-400">
+                        <li>{post.comments}</li>
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5 mb-20">
+            <motion.h3
+              variants={right}
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+                delay: 14,
+              }}
+              className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
+            >
+              Docker & Kubernetes (Containerization)
+            </motion.h3>
+            {Object.values(docker).map((posts, idx) => (
+              <motion.div
+                variants={right}
+                initial="hidden"
+                animate="enter"
+                exit="exit"
+                transition={{
+                  ease: "linear",
+                  duration: 2,
+                  x: { duration: 1 },
+                  delay: 15,
                 }}
                 key={idx}
                 className={"bg-white p-3 text-yellow-500 ml-5 mr-10"}
