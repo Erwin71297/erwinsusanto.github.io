@@ -24,7 +24,7 @@ export default function Skillset() {
         id: 1,
         title: "Go Language",
         types:
-          "go-routines, message brokers (ex: GCP Pubsub), Redis (cache), Logging, Swagger, Error handling, and Tracking (Scalyr, Open-Telemetry, Sonarqube, New Relic)",
+          "go-routines, message brokers (ex: GCP Pubsub), AWS, GCP, Redis (cache), Logging, Swagger, Error handling, and Tracking (Scalyr, Open-Telemetry, Sonarqube, New Relic)",
         comments:
           "I started golang at around the same time I started learning backend engineering. It was a new experience which took a while to get used to. To me golang is easy to learn but hard to master, as there's a lot of stuff that needs consideration before implementation. A typical example of this is when accessing the queries, you have the option to use the golang provided gorm or you could still use rawquery. Both have pros and cons and needs sufficient enough knowledge to know when to use which. Another clear example of this is when using golang to perform functions that can be run using go routines. This is because while go routines are recommended when you have many background tasks, the way you use it can result in it being slower and heavier than the typical methods like async functions.",
         commentscont:
