@@ -18,6 +18,12 @@ export default function Skillset() {
     exit: { opacity: 0, x: 0, y: 100 },
   };
 
+  const down = {
+    hidden: { opacity: 0, x: 0, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 100 },
+  };
+
   let go = {
     Go: [
       {
@@ -124,6 +130,23 @@ export default function Skillset() {
           <Navigation />
           <div className="w-full px-2 mt-16 mr-auto ml-auto px-5">
             <motion.h3
+              variants={down}
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+              }}
+              className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
+            >
+              Server-Side Engineering
+            </motion.h3>
+          </div>
+
+          <div className="w-full px-2 mt-16 mr-auto ml-auto px-5">
+            <motion.h3
               variants={left}
               initial="hidden"
               animate="enter"
@@ -132,6 +155,7 @@ export default function Skillset() {
                 ease: "linear",
                 duration: 2,
                 x: { duration: 1 },
+                delay: 1,
               }}
               className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
             >
@@ -147,7 +171,7 @@ export default function Skillset() {
                   ease: "linear",
                   duration: 2,
                   x: { duration: 1 },
-                  delay: 1,
+                  delay: 2,
                 }}
                 key={idx}
                 className={"bg-white p-3 text-yellow-500 ml-5 mr-10"}
@@ -187,13 +211,13 @@ export default function Skillset() {
                 ease: "linear",
                 duration: 2,
                 x: { duration: 1 },
-                delay: 2,
+                delay: 3,
               }}
               className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
             >
-              Next JS & React JS
+              C#
             </motion.h3>
-            {Object.values(next).map((posts, idx) => (
+            {Object.values(c).map((posts, idx) => (
               <motion.div
                 variants={right}
                 initial="hidden"
@@ -203,63 +227,7 @@ export default function Skillset() {
                   ease: "linear",
                   duration: 2,
                   x: { duration: 1 },
-                  delay: 3,
-                }}
-                key={idx}
-                className={"bg-white p-3 text-yellow-500 ml-5 mr-10"}
-              >
-                <ul>
-                  {posts.map((post) => (
-                    <li
-                      key={post.id}
-                      className="relative p-3 hover:bg-gradient-to-r from-gray-900 from:10% to-gray-600"
-                    >
-                      <hr className={styles.line}></hr>
-                      <h4 className="mt-2">Examples :</h4>
-                      <ul className="mt-1 flex space-x-1 text-base font-normal leading-4 text-gray-400">
-                        <li>{post.types}</li>
-                      </ul>
-                      <h4 className="mt-5">Description :</h4>
-                      <ul className="mt-2 flex space-x-1 text-base font-normal leading-4 text-gray-400">
-                        <li>{post.comments}</li>
-                      </ul>
-                      <ul className="mt-3 flex space-x-1 text-base font-normal leading-4 text-gray-400">
-                        <li>{post.commentscont}</li>
-                      </ul>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5">
-            <motion.h3
-              variants={left}
-              initial="hidden"
-              animate="enter"
-              exit="exit"
-              transition={{
-                ease: "linear",
-                duration: 2,
-                x: { duration: 1 },
-                delay: 4,
-              }}
-              className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
-            >
-              HTML & CSS
-            </motion.h3>
-            {Object.values(html).map((posts, idx) => (
-              <motion.div
-                variants={left}
-                initial="hidden"
-                animate="enter"
-                exit="exit"
-                transition={{
-                  ease: "linear",
-                  duration: 2,
-                  x: { duration: 1 },
-                  delay: 5,
+                  delay: 4,
                 }}
                 key={idx}
                 className={"bg-white p-3 text-yellow-500 ml-5 mr-10"}
@@ -282,7 +250,25 @@ export default function Skillset() {
             ))}
           </div>
 
-          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5">
+          <div className="w-full px-2 mt-16 mr-auto ml-auto px-5">
+            <motion.h3
+              variants={down}
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+                delay: 5,
+              }}
+              className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
+            >
+              Client-Side Engineering
+            </motion.h3>
+          </div>
+
+          <div className="w-full px-2 mt-16 mr-auto ml-auto px-5">
             <motion.h3
               variants={right}
               initial="hidden"
@@ -296,9 +282,9 @@ export default function Skillset() {
               }}
               className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
             >
-              Javascript
+              Next JS & React JS
             </motion.h3>
-            {Object.values(java).map((posts, idx) => (
+            {Object.values(next).map((posts, idx) => (
               <motion.div
                 variants={right}
                 initial="hidden"
@@ -320,9 +306,16 @@ export default function Skillset() {
                       className="relative p-3 hover:bg-gradient-to-r from-gray-900 from:10% to-gray-600"
                     >
                       <hr className={styles.line}></hr>
-                      <h4 className="mt-2">Description :</h4>
+                      <h4 className="mt-2">Examples :</h4>
+                      <ul className="mt-1 flex space-x-1 text-base font-normal leading-4 text-gray-400">
+                        <li>{post.types}</li>
+                      </ul>
+                      <h4 className="mt-5">Description :</h4>
                       <ul className="mt-2 flex space-x-1 text-base font-normal leading-4 text-gray-400">
                         <li>{post.comments}</li>
+                      </ul>
+                      <ul className="mt-3 flex space-x-1 text-base font-normal leading-4 text-gray-400">
+                        <li>{post.commentscont}</li>
                       </ul>
                     </li>
                   ))}
@@ -345,9 +338,9 @@ export default function Skillset() {
               }}
               className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
             >
-              MySQL
+              HTML & CSS
             </motion.h3>
-            {Object.values(sql).map((posts, idx) => (
+            {Object.values(html).map((posts, idx) => (
               <motion.div
                 variants={left}
                 initial="hidden"
@@ -380,7 +373,7 @@ export default function Skillset() {
             ))}
           </div>
 
-          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5 ">
+          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5">
             <motion.h3
               variants={right}
               initial="hidden"
@@ -394,9 +387,9 @@ export default function Skillset() {
               }}
               className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
             >
-              PostGreSQL
+              Javascript
             </motion.h3>
-            {Object.values(postgre).map((posts, idx) => (
+            {Object.values(java).map((posts, idx) => (
               <motion.div
                 variants={right}
                 initial="hidden"
@@ -429,9 +422,9 @@ export default function Skillset() {
             ))}
           </div>
 
-          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5">
+          <div className="w-full px-2 mt-16 mr-auto ml-auto px-5">
             <motion.h3
-              variants={left}
+              variants={down}
               initial="hidden"
               animate="enter"
               exit="exit"
@@ -443,9 +436,28 @@ export default function Skillset() {
               }}
               className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
             >
-              C#
+              Databases
             </motion.h3>
-            {Object.values(c).map((posts, idx) => (
+          </div>
+
+
+          <div className="w-full px-2 mt-16 mr-auto ml-auto px-5">
+            <motion.h3
+              variants={left}
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+                delay: 13,
+              }}
+              className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
+            >
+              MySQL
+            </motion.h3>
+            {Object.values(sql).map((posts, idx) => (
               <motion.div
                 variants={left}
                 initial="hidden"
@@ -455,7 +467,7 @@ export default function Skillset() {
                   ease: "linear",
                   duration: 2,
                   x: { duration: 1 },
-                  delay: 13,
+                  delay: 14,
                 }}
                 key={idx}
                 className={"bg-white p-3 text-yellow-500 ml-5 mr-10"}
@@ -478,7 +490,7 @@ export default function Skillset() {
             ))}
           </div>
 
-          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5 mb-20">
+          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5 ">
             <motion.h3
               variants={right}
               initial="hidden"
@@ -488,13 +500,13 @@ export default function Skillset() {
                 ease: "linear",
                 duration: 2,
                 x: { duration: 1 },
-                delay: 14,
+                delay: 15,
               }}
               className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
             >
-              Docker & Kubernetes (Containerization)
+              PostGreSQL
             </motion.h3>
-            {Object.values(docker).map((posts, idx) => (
+            {Object.values(postgre).map((posts, idx) => (
               <motion.div
                 variants={right}
                 initial="hidden"
@@ -504,7 +516,74 @@ export default function Skillset() {
                   ease: "linear",
                   duration: 2,
                   x: { duration: 1 },
-                  delay: 15,
+                  delay: 16,
+                }}
+                key={idx}
+                className={"bg-white p-3 text-yellow-500 ml-5 mr-10"}
+              >
+                <ul>
+                  {posts.map((post) => (
+                    <li
+                      key={post.id}
+                      className="relative p-3 hover:bg-gradient-to-r from-gray-900 from:10% to-gray-600"
+                    >
+                      <hr className={styles.line}></hr>
+                      <h4 className="mt-2">Description :</h4>
+                      <ul className="mt-2 flex space-x-1 text-base font-normal leading-4 text-gray-400">
+                        <li>{post.comments}</li>
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="w-full px-2 mt-16 mr-auto ml-auto px-5">
+            <motion.h3
+              variants={down}
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+                delay: 17,
+              }}
+              className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
+            >
+              Deployment And Infrastructure
+            </motion.h3>
+          </div>
+
+          <div className="w-full px-2 mt-6 mr-auto ml-auto px-5 mb-20">
+            <motion.h3
+              variants={left}
+              initial="hidden"
+              animate="enter"
+              exit="exit"
+              transition={{
+                ease: "linear",
+                duration: 2,
+                x: { duration: 1 },
+                delay: 18,
+              }}
+              className="bg-gray-700 p-3 space-x-1 text-yellow-500 ml-5 mr-10 mb-3"
+            >
+              Docker & Kubernetes (Containerization)
+            </motion.h3>
+            {Object.values(docker).map((posts, idx) => (
+              <motion.div
+                variants={left}
+                initial="hidden"
+                animate="enter"
+                exit="exit"
+                transition={{
+                  ease: "linear",
+                  duration: 2,
+                  x: { duration: 1 },
+                  delay: 19,
                 }}
                 key={idx}
                 className={"bg-white p-3 text-yellow-500 ml-5 mr-10"}
