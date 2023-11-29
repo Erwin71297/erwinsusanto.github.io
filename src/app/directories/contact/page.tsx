@@ -3,15 +3,18 @@
 import { AOSInit } from "@/app/aos";
 import styles from "./page.module.css";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Navigation from "@/app/component/navigation";
 import Link from "next/link";
+import { Modal } from "@/app/component/modals/modal";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Contacts() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <html className={styles.html}>
@@ -70,7 +73,20 @@ export default function Contacts() {
               />
             </div>
             <div>
-              <button className={styles.send}>Send</button>
+              <button
+                onClick={() => setShowModal(true)}
+                className={styles.send}
+              >
+                Send
+              </button>
+              {showModal && (
+                <Modal onClose={() => setShowModal(false)}>
+                  <div className={styles.modal}>
+                    <h1 className="font-semibold mb-3">This is purely for aesthetics</h1>
+                    <p>Currently not functional</p>
+                  </div>
+                </Modal>
+              )}
             </div>
           </div>
 

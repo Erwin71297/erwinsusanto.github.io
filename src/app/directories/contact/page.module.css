@@ -75,3 +75,11 @@
 .send:hover{
   background-color: lightgreen;
 }
+
+.modal {
+  background-color: gold;
+  color: black;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 20px;
+}

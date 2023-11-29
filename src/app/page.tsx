@@ -80,7 +80,7 @@ export default function Home() {
             </span>
           </p>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Unclassified infomation. Dare to click?
+            Unclassified infomation.
           </p>
         </div>
       </div>
