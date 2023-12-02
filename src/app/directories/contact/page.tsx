@@ -82,7 +82,9 @@ export default function Contacts() {
               {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                   <div className={styles.modal}>
-                    <h1 className="font-semibold mb-3">This is purely for aesthetics</h1>
+                    <h1 className="font-semibold mb-3">
+                      This is purely for aesthetics
+                    </h1>
                     <p>Currently not functional</p>
                   </div>
                 </Modal>
@@ -91,94 +93,102 @@ export default function Contacts() {
           </div>
 
           {/* Start of contacts */}
-          <div className="grid lg:grid-cols-2">
-            <div>
-              <AOSInit />
-              <Link href="https://www.facebook.com/erwin.susanto.522">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="100"
-                  className={classNames(
-                    "py-5 px-5 flex ml-20 mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
-                    "hover:bg-gray-800"
-                  )}
-                >
-                  <Image
-                    className="relative rounded-3xl"
-                    src="/assets/facebook.png"
-                    alt="facebook"
-                    width={40}
-                    height={40}
-                  />
-                  <h1 className="mt-auto mb-auto ml-5 text-white">Facebook</h1>
-                </div>
-              </Link>
-              <AOSInit />
-              <Link href="https://www.linkedin.com/in/erwin-susanto-431670209/">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
-                  className={classNames(
-                    "py-5 px-5 flex ml-20 mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
-                    "hover:bg-gray-800"
-                  )}
-                >
-                  <Image
-                    className="relative rounded-3xl"
-                    src="/assets/linkedin.png"
-                    alt="linkedin"
-                    width={40}
-                    height={40}
-                  />
-                  <h1 className="mt-auto mb-auto ml-5 text-white">LinkedIn</h1>
-                </div>
-              </Link>
-            </div>
-            <div>
-              <AOSInit />
-              <Link href="https://github.com/Erwin71297">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="300"
-                  className={classNames(
-                    "py-5 px-5 flex mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
-                    "hover:bg-gray-800"
-                  )}
-                >
-                  <Image
-                    className="relative rounded-3xl"
-                    src="/assets/github.png"
-                    alt="github"
-                    width={40}
-                    height={40}
-                  />
-                  <h1 className="mt-auto mb-auto ml-5 text-white">Github</h1>
-                </div>
-              </Link>
-              <AOSInit />
-              <Link href="https://www.instagram.com/erwins7/">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="400"
-                  className={classNames(
-                    "py-5 px-5 flex mb-20 border-2 border-yellow-400 mr-20 rounded-3xl mt-10",
-                    "hover:bg-gray-800"
-                  )}
-                >
-                  <Image
-                    className="relative rounded-3xl"
-                    src="/assets/instagram.svg.png"
-                    alt="instagram"
-                    width={40}
-                    height={40}
-                  />
-                  <h1 className="mt-auto mb-auto ml-5 text-white">Instagram</h1>
-                </div>
-              </Link>
+          <div className={styles.container}>
+            <div className="grid lg:grid-cols-2">
+              <div>
+                <AOSInit />
+                <Link href="https://www.facebook.com/erwin.susanto.522">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                    className={classNames(
+                      "py-5 px-5 flex mb-10 border-2 border-yellow-400 mr-10 rounded-3xl mt-10",
+                      "hover:bg-gray-800"
+                    )}
+                  >
+                    <Image
+                      className="relative rounded-3xl"
+                      src="/assets/facebook.png"
+                      alt="facebook"
+                      width={40}
+                      height={40}
+                    />
+                    <h1 className="mt-auto mb-auto ml-5 text-white">
+                      Facebook
+                    </h1>
+                  </div>
+                </Link>
+                <AOSInit />
+                <Link href="https://www.linkedin.com/in/erwin-susanto-431670209/">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                    className={classNames(
+                      "py-5 px-5 flex mb-10 border-2 border-yellow-400 mr-10 rounded-3xl mt-10",
+                      "hover:bg-gray-800"
+                    )}
+                  >
+                    <Image
+                      className="relative rounded-3xl"
+                      src="/assets/linkedin.png"
+                      alt="linkedin"
+                      width={40}
+                      height={40}
+                    />
+                    <h1 className="mt-auto mb-auto ml-5 text-white">
+                      LinkedIn
+                    </h1>
+                  </div>
+                </Link>
+              </div>
+              <div>
+                <AOSInit />
+                <Link href="https://github.com/Erwin71297">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                    className={classNames(
+                      "py-5 px-5 flex ml-5 mb-10 border-2 border-yellow-400 rounded-3xl mt-10",
+                      "hover:bg-gray-800"
+                    )}
+                  >
+                    <Image
+                      className="relative rounded-3xl"
+                      src="/assets/github.png"
+                      alt="github"
+                      width={40}
+                      height={40}
+                    />
+                    <h1 className="mt-auto mb-auto ml-5 text-white">Github</h1>
+                  </div>
+                </Link>
+                <AOSInit />
+                <Link href="https://www.instagram.com/erwins7/">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="400"
+                    className={classNames(
+                      "py-5 px-5 flex ml-5 mb-10 border-2 border-yellow-400 rounded-3xl mt-10",
+                      "hover:bg-gray-800"
+                    )}
+                  >
+                    <Image
+                      className="relative rounded-3xl"
+                      src="/assets/instagram.svg.png"
+                      alt="instagram"
+                      width={40}
+                      height={40}
+                    />
+                    <h1 className="mt-auto mb-auto ml-5 text-white">
+                      Instagram
+                    </h1>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </body>
