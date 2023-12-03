@@ -29,11 +29,10 @@
 }
 
 .stylebg {
-  max-width: 100%;
   height: 270px;
-  width:auto\9;
-  margin-right: 10;
-  margin-left: 5;
+  width:100%;
+  padding-right: 55px;
+  margin-left: 15px;
   opacity: 40%;
   position: absolute;
 }

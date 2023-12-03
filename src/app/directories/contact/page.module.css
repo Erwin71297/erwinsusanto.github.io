@@ -16,9 +16,8 @@
 }
 
 .stylebg {
-  max-width: 100%;
   height: auto;
-  width:auto\9;
+  width:100%;
   opacity: 40%;
   position: absolute;
   border: 2px red solid;
