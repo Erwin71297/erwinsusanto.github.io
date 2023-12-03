@@ -21,7 +21,7 @@ export default function Contacts() {
         <body>
           <Navigation />
           {/* Here is the start of links */}
-          <div className="overflow-hidden relative w-6/12 mt-5 pb-10 mr-auto ml-auto">
+          <div className="overflow-hidden relative w-3/5 mt-5 pb-10 mr-auto ml-auto">
             <Image
               className={styles.stylebg}
               src="/assets/jpbg.jpg"
